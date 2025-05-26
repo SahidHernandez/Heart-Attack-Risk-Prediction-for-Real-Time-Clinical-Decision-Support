@@ -2,6 +2,5 @@ streamlit
 pandas
 numpy
 joblib
-os
 PIL
 matplotlib
