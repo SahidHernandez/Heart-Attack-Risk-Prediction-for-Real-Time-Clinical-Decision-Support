@@ -4,3 +4,4 @@ numpy
 joblib
 Pillow
 matplotlib
+scikit-learn
