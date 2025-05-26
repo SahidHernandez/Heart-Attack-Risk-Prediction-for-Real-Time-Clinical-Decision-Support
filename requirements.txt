@@ -5,3 +5,4 @@ joblib
 Pillow
 matplotlib
 scikit-learn
+xgboost
