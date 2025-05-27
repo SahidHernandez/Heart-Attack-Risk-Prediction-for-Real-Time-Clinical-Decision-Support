@@ -40,7 +40,8 @@ with st.expander("Model 1", expanded=False):
     - **CK-MB:** Creatine Kinase MB, it serves as a marker of damage to the heart muscle and is used to diagnose or evaluate conditions such as myocardial infarction (heart attack).
     - **Troponin:**It is a group of proteins present in the heart muscles. Troponin is released into the bloodstream when there is damage to the heart muscle.
     - **Gender:** Patient´s gender.
-    """
+    
+    """)
 
 st.markdown("---")
 
