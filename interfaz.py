@@ -45,7 +45,7 @@ with st.expander("Model 1", expanded=False):
     
 with st.expander("Model 2", expanded=False):
     st.markdown("""
-    - **Exang:** Exercise-induced angina. 
+    - **Exang:** Exercise-induced angina (0 = False, 1 = True). 
     - **Cp:** Chest pain type (0 = typical angina, 1 = atypical angina, 2 = non-anginal, 3 = asymptomatic).
     - **Oldpeak:** ST depression induced by exercise ST segment.
     - **Thalach:** Maximum heart rate archived.
@@ -56,17 +56,17 @@ with st.expander("Model 2", expanded=False):
 st.markdown("---")
 
 # Selección de modelo con botones
-st.subheader("Seleccione el modelo para la predicción")
+st.subheader("Select the model for prediction")
 col1, col2 = st.columns(2)
 with col1:
     if st.button("Modelo 1"):
-        st.session_state['modelo_nombre'] = 'Modelo 1'
+        st.session_state['modelo_nombre'] = 'Model 1'
 with col2:
     if st.button("Modelo 2"):
-        st.session_state['modelo_nombre'] = 'Modelo 2'
+        st.session_state['modelo_nombre'] = 'Model 2'
 
 modelo_nombre = st.session_state['modelo_nombre']
-st.markdown(f"*Modelo seleccionado:* {modelo_nombre}")
+st.markdown(f"*Selected model:* {modelo_nombre}")
 
 # Obtener modelo, scaler y variables
 config = config_modelos[modelo_nombre]
@@ -74,7 +74,7 @@ modelo = config['modelo']
 scaler = config['scaler']
 vars_requeridas = config['variables']
 
-st.markdown("### Ingrese los datos del paciente")
+st.markdown("### Enter the patient's data")
 
 # Entradas condicionales
 valores = {}
@@ -158,40 +158,7 @@ if st.button("Predecir"):
             """, unsafe_allow_html=True)
 
 
-st.markdown("")
-with st.expander("Mostrar mas información", expanded=False):
 
-    st.markdown("""
-   
-    ### Funciones principales:
-
-    - **Predicción** -> Realiza la predicción de reisgo de ataque cardíaco para el paciente evaluado.
-    - **Pobabilidad** -> muestra la probabilidad en un gráfico tipo pastel.
-    - **Matriz de confusión** -> Visualiza la para evaluar el desempeño del modelo.
-    - **Curvas ROC** -> Grafica que muestra la relación entre la tasa de TP y FP de todos los modelos.
-    - **Tiempo de inferencia** -> Evalua el **tiempo de inferencia** para cada modelo.
-                
-    ---
-                
-    ### Modelos implementados:
-    - Regresión Logística
-    - Naive Bayes
-    - KNN
-    - Árbol de Decisión
-    - SVM
-    - Red Neuronal MLP
-    ---
-                
-    ### Metricas de evaluación:
-    - **Accuracy**
-    - **Precision**
-    - **Recall**
-    - **F1-score**
-    - **F0.5-score**
-    - **F2-score**
-
-    ---
-    """)
 
 
 #Pie de página fijo 
