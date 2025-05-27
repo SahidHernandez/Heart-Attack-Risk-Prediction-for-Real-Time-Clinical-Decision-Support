@@ -59,10 +59,10 @@ st.markdown("---")
 st.subheader("Select the model for prediction")
 col1, col2 = st.columns(2)
 with col1:
-    if st.button("Modelo 1"):
+    if st.button("Model 1"):
         st.session_state['modelo_nombre'] = 'Model 1'
 with col2:
-    if st.button("Modelo 2"):
+    if st.button("Model 2"):
         st.session_state['modelo_nombre'] = 'Model 2'
 
 modelo_nombre = st.session_state['modelo_nombre']
@@ -80,7 +80,7 @@ st.markdown("### Enter the patient's data")
 valores = {}
 
 if 'Age' in vars_requeridas:
-    valores['Age'] = st.number_input("Edad", min_value=0, max_value=120, value=45)
+    valores['Age'] = st.number_input("Age", min_value=0, max_value=120, value=45)
 
 if 'CK-MB' in vars_requeridas:
     ckmb = st.number_input("CK-MB", value=2.86, min_value=0.00, format="%.2f")
@@ -91,7 +91,7 @@ if 'Troponin' in vars_requeridas:
     valores['Troponin'] = np.log(troponina + 1e-10)
 
 if 'Gender' in vars_requeridas:
-    valores['Gender'] = st.selectbox("Género", options=["Masculino", "Femenino"])
+    valores['Gender'] = st.selectbox("Gender", options=["Masculino", "Femenino"])
     # Convertir a valor numérico si el modelo lo requiere
     valores['Gender'] = 1 if valores['Gender'] == "Masculino" else 0
 
