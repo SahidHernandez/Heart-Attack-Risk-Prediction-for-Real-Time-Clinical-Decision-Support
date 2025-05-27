@@ -91,9 +91,9 @@ if 'Troponin' in vars_requeridas:
     valores['Troponin'] = np.log(troponina + 1e-10)
 
 if 'Gender' in vars_requeridas:
-    valores['Gender'] = st.selectbox("Gender", options=["Masculino", "Femenino"])
+    valores['Gender'] = st.selectbox("Gender", options=["Male", "Female"])
     # Convertir a valor numérico si el modelo lo requiere
-    valores['Gender'] = 1 if valores['Gender'] == "Masculino" else 0
+    valores['Gender'] = 1 if valores['Gender'] == "Male" else 0
 
 if 'exang' in vars_requeridas:
     valores['exang'] = st.selectbox("exang", options=[0, 1])
