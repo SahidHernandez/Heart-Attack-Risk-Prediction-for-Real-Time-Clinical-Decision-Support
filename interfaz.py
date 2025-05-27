@@ -7,8 +7,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 # Configuración de la página
-#logo = Image.open("LogoUAT.png")
-st.set_page_config(page_title="FIC", layout="wide")
+logo = Image.open("LogoUAT.png")
+st.set_page_config(page_title="FIC", page_icon = logo, layout="wide")
 
 # Cargar configuraciones de modelos
 config_modelos = {
