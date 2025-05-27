@@ -36,10 +36,20 @@ Machine learning techniques are used to predict the risk of a heart attack in pa
 
 with st.expander("Model 1", expanded=False):
     st.markdown("""
-    - **Age:**Patient´s age.
+    - **Age:** Patient´s age.
     - **CK-MB:** Creatine Kinase MB, it serves as a marker of damage to the heart muscle and is used to diagnose or evaluate conditions such as myocardial infarction (heart attack).
-    - **Troponin:**It is a group of proteins present in the heart muscles. Troponin is released into the bloodstream when there is damage to the heart muscle.
+    - **Troponin:** It is a group of proteins present in the heart muscles. Troponin is released into the bloodstream when there is damage to the heart muscle.
     - **Gender:** Patient´s gender.
+    
+    """)
+    
+with st.expander("Model 2", expanded=False):
+    st.markdown("""
+    - **Exang:** Exercise-induced angina. 
+    - **Cp:** Chest pain type (0 = typical angina, 1 = atypical angina, 2 = non-anginal, 3 = asymptomatic).
+    - **Oldpeak:** ST depression induced by exercise ST segment.
+    - **Thalach:** Maximum heart rate archived.
+    - **Ca:** Number of major vassels (0-3) colored by fluoroscopy.
     
     """)
 
