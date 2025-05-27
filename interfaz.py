@@ -28,9 +28,13 @@ config_modelos = {
 if 'modelo_nombre' not in st.session_state:
     st.session_state['modelo_nombre'] = 'Modelo 1'
 
-st.title("Clasificación de ataque cardíaco")
+st.title("Heart Attack Classifier")
 st.write("""
-Esta aplicación predice el riesgo de un posible ataque cardíaco utilizando diferentes algoritmos de clasificación.
+This application is only for medical decision support and does not replace expert evaluation.
+Machine learning techniques are used to predict the risk of a heart attack in patients. For this, we use two models with different biomarkers:
+
+- **Model 1:** Age, CK-MB, Troponin, Gender.
+- **Model 2** Exang, cp, oldpeak, thalach, ca
 """)
 
 st.markdown("---")
@@ -136,3 +140,32 @@ if st.button("Predecir"):
                     </div>
                 </div>
             """, unsafe_allow_html=True)
+
+#Pie de página fijo 
+st.markdown("""
+    <style>
+    /* Espacio inferior al contenido para que no lo tape el footer */
+    .stApp {
+        padding-bottom: 80px;
+    }
+
+    /* Footer fijo en la parte inferior */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #6c757d;
+        text-align: center;
+        font-size: 0.75em;
+        color: #f1f3f6;
+        padding: 10px;
+        z-index: 9999;
+        box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+    }
+    </style>
+
+    <div class="footer">
+        Facultad de Ingeniería y Ciencias - Universidad Autónoma de Tamaulipas
+    </div>
+""", unsafe_allow_html=True)
