@@ -12,12 +12,12 @@ st.set_page_config(page_title="FIC", layout="wide")
 
 # Cargar configuraciones de modelos
 config_modelos = {
-    'Modelo 1': {
+    'Model 1': {
         'modelo': joblib.load('1erdataset/ensamble_GBC_dataset2.pkl'),
         'scaler': joblib.load('1erdataset/modelo_standardscaler.pkl'),
         'variables': ['Age', 'CK-MB', 'Troponin', 'Gender']
     },
-    'Modelo 2': {
+    'Model 2': {
         'modelo': joblib.load('2dodataset/ensamble_GBC_dataset2.pkl'),
         'scaler': joblib.load('2dodataset/modelo_standardscaler_2.pkl'),
         'variables': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
