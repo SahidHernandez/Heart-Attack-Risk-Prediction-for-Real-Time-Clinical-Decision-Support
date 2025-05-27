@@ -108,7 +108,7 @@ if 'thalach' in vars_requeridas:
     valores['thalach'] = st.number_input("thalach", min_value=50, max_value=250, value=150)
 
 if 'ca' in vars_requeridas:
-    valores['ca'] = st.selectbox("cp", options=[0, 1, 2, 3])
+    valores['ca'] = st.selectbox("ca", options=[0, 1, 2, 3])
 
 # Procesar predicción al hacer clic
 if st.button("Predecir"):
