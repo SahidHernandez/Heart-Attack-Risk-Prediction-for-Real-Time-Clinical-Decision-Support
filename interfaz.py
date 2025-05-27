@@ -32,10 +32,15 @@ st.title("Heart Attack Classifier")
 st.write("""
 This application is only for medical decision support and does not replace expert evaluation.
 Machine learning techniques are used to predict the risk of a heart attack in patients. For this, we use two models with different biomarkers:
-
-- **Model 1:** Age, CK-MB, Troponin, Gender.
-- **Model 2** Exang, cp, oldpeak, thalach, ca
 """)
+
+with st.expander("Model 1", expanded=False):
+    st.markdown("""
+    - **Age:**Patient´s age.
+    - **CK-MB:** Creatine Kinase MB, it serves as a marker of damage to the heart muscle and is used to diagnose or evaluate conditions such as myocardial infarction (heart attack).
+    - **Troponin:**It is a group of proteins present in the heart muscles. Troponin is released into the bloodstream when there is damage to the heart muscle.
+    - **Gender:** Patient´s gender.
+    """
 
 st.markdown("---")
 
@@ -140,6 +145,43 @@ if st.button("Predecir"):
                     </div>
                 </div>
             """, unsafe_allow_html=True)
+
+
+st.markdown("")
+with st.expander("Mostrar mas información", expanded=False):
+
+    st.markdown("""
+   
+    ### Funciones principales:
+
+    - **Predicción** -> Realiza la predicción de reisgo de ataque cardíaco para el paciente evaluado.
+    - **Pobabilidad** -> muestra la probabilidad en un gráfico tipo pastel.
+    - **Matriz de confusión** -> Visualiza la para evaluar el desempeño del modelo.
+    - **Curvas ROC** -> Grafica que muestra la relación entre la tasa de TP y FP de todos los modelos.
+    - **Tiempo de inferencia** -> Evalua el **tiempo de inferencia** para cada modelo.
+                
+    ---
+                
+    ### Modelos implementados:
+    - Regresión Logística
+    - Naive Bayes
+    - KNN
+    - Árbol de Decisión
+    - SVM
+    - Red Neuronal MLP
+    ---
+                
+    ### Metricas de evaluación:
+    - **Accuracy**
+    - **Precision**
+    - **Recall**
+    - **F1-score**
+    - **F0.5-score**
+    - **F2-score**
+
+    ---
+    """)
+
 
 #Pie de página fijo 
 st.markdown("""
