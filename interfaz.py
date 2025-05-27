@@ -26,7 +26,7 @@ config_modelos = {
 
 # Inicializar modelo por defecto
 if 'modelo_nombre' not in st.session_state:
-    st.session_state['modelo_nombre'] = 'Modelo 1'
+    st.session_state['modelo_nombre'] = 'Model 1'
 
 st.title("Heart Attack Classifier")
 st.write("""
