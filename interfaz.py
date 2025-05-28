@@ -111,17 +111,17 @@ if 'ca' in vars_requeridas:
     valores['ca'] = st.selectbox("ca", options=[0, 1, 2, 3])
 
 # Procesar predicción al hacer clic
-if st.button("Predecir"):
+if st.button("Classify"):
     # Asegura el orden y la presencia de todas las variables requeridas
     entrada = pd.DataFrame([[valores.get(var, np.nan) for var in vars_requeridas]], columns=vars_requeridas)
     entrada = entrada[scaler.feature_names_in_]
     entrada_scaled = scaler.transform(entrada)
     pred = modelo.predict(entrada_scaled)[0]
 
-    resultado = "Positivo" if pred == 1 else "Negativo"
+    resultado = "Positive" if pred == 1 else "Negative"
     color = "red" if pred == 1 else "green"
 
-    st.markdown(f"### Resultado: <span style='color:{color}'>{resultado}</span>", unsafe_allow_html=True)
+    st.markdown(f"### Result: <span style='color:{color}'>{resultado}</span>", unsafe_allow_html=True)
 
     # Mostrar probabilidades si están disponibles
     if hasattr(modelo, 'predict_proba'):
