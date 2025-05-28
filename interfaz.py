@@ -148,11 +148,11 @@ if st.button("Classify"):
                 <div style="display: flex; justify-content: center; gap: 20px; margin-top: -10px;">
                     <div style="display: flex; align-items: center;">
                         <div style="width: 25px; height: 25px; background-color: #58b915; margin-right: 5px; border-radius: 3px;"></div>
-                        <span style="font-size: 2em;">Negativo</span>
+                        <span style="font-size: 2em;">Negative</span>
                     </div>
                     <div style="display: flex; align-items: center;">
                         <div style="width: 25px; height: 25px; background-color: #e97c34; margin-right: 5px; border-radius: 3px;"></div>
-                        <span style="font-size: 2em;">Positivo</span>
+                        <span style="font-size: 2em;">Positive</span>
                     </div>
                 </div>
             """, unsafe_allow_html=True)
