@@ -8,3 +8,5 @@ scikit-learn
 xgboost
 scikit-learn-intelex
 time
+seaborn
+scipy
