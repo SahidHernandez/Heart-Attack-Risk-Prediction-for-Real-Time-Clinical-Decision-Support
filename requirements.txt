@@ -4,6 +4,6 @@ numpy
 joblib
 Pillow
 matplotlib
-scikit-learn
+scikit-learn==1.3.2
 xgboost
-scikit-learn-intelex
+scikit-learn-intelex==2024.0.1
