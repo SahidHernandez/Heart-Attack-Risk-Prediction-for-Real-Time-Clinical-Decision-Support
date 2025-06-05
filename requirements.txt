@@ -1,9 +1,9 @@
 streamlit
 pandas
-numpy==1.26.4
+numpy
 joblib
 Pillow
 matplotlib
-scikit-learn==1.3.2
+scikit-learn
 xgboost
-scikit-learn-intelex==2024.0.1
+
