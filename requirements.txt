@@ -6,4 +6,4 @@ Pillow
 matplotlib
 scikit-learn
 xgboost
-
+scikit-learn-intelex
