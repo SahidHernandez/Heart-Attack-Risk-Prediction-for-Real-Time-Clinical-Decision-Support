@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 from PIL import Image
 import matplotlib.pyplot as plt
+from sklearnex import patch_sklearn
 
 # Page configuration
 logo = Image.open("LogoUAT.png")
