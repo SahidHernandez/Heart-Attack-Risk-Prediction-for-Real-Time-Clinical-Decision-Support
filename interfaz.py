@@ -12,7 +12,7 @@ st.set_page_config(page_title="FIC", page_icon=logo, layout="wide")
 # Load model configurations
 model_configs = {
     'Model 1': {
-        'model': joblib.load('1st_dataset_final/ensemble_RandomForest_dataset1.pkl'),
+        'model': joblib.load('Prediction-of-Acute-Myocardial-Infarction-Risk-Using-Stacked-Machine-Learning-Models/1st_dataset_final/ensemble_RandomForest_dataset1.pkl'),
         'scaler': joblib.load('1st_dataset_final/model_standardscaler.pkl'),
         'variable': ['Age', 'CK-MB', 'Troponin', 'Gender']
     },
