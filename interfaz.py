@@ -17,7 +17,7 @@ model_configs = {
         'variable': ['Age', 'CK-MB', 'Troponin', 'Gender']
     },
     'Model 2': {
-        'model': joblib.load('2nd_dataset_final/ensemble_DecisionTree_dataset2.pkl'),
+        'model': joblib.load('2nd_dataset_final/ensemble_DeciionTree_dataset2.pkl'),
         'scaler': joblib.load('2nd_dataset_final/model_standardscaler.pkl'),
         'variable': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
     }
