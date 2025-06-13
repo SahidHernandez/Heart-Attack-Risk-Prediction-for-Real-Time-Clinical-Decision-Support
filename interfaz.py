@@ -8,19 +8,19 @@ import matplotlib.pyplot as plt
 #patch_sklearn()
 
 # Page configuration
-logo = Image.open("LogoUAT.png")
+logo = Image.open("ficLogo.png")
 st.set_page_config(page_title="FIC", page_icon=logo, layout="wide")
 
 # Load model configurations
 model_configs = {
     'Model 1': {
-        'model': joblib.load('1st_dataset_final/ensemble_RandomForest_dataset1.pkl'),
-        'scaler': joblib.load('1st_dataset_final/model_standardscaler.pkl'),
+        'model': joblib.load('Dataset 1/ensemble_RandomForest_dataset1.pkl'),
+        'scaler': joblib.load('Dataset 1/model_standardscaler.pkl'),
         'variable': ['Age', 'CK-MB', 'Troponin', 'Gender']
     },
     'Model 2': {
-        'model': joblib.load('2nd_dataset_final/ensemble_DecisionTree_dataset2.pkl'),
-        'scaler': joblib.load('2nd_dataset_final/model_standardscaler.pkl'),
+        'model': joblib.load('Dataset 2/ensemble_DecisionTree_dataset2.pkl'),
+        'scaler': joblib.load('Dataset 2/model_standardscaler.pkl'),
         'variable': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
     }
 }
