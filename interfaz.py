@@ -14,13 +14,13 @@ st.set_page_config(page_title="FIC", page_icon=logo, layout="wide")
 # Load model configurations
 model_configs = {
     'Model 1': {
-        'model': joblib.load('Dataset 1/ensemble_RandomForest_dataset1.pkl'),
-        'scaler': joblib.load('Dataset 1/model_standardscaler.pkl'),
+        'model': joblib.load('Dataset_1/ensemble_RandomForest_dataset1.pkl'),
+        'scaler': joblib.load('Dataset_1/model_standardscaler.pkl'),
         'variable': ['Age', 'CK-MB', 'Troponin', 'Gender']
     },
     'Model 2': {
-        'model': joblib.load('Dataset 2/ensemble_DecisionTree_dataset2.pkl'),
-        'scaler': joblib.load('Dataset 2/model_standardscaler.pkl'),
+        'model': joblib.load('Dataset_2/ensemble_DecisionTree_dataset2.pkl'),
+        'scaler': joblib.load('Dataset_2/model_standardscaler.pkl'),
         'variable': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
     }
 }
