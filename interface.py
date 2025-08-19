@@ -108,7 +108,7 @@ if 'ca' in vars_required:
     values['ca'] = st.selectbox("Number of vessels (ca)", options=[0, 1, 2, 3])
 
 # Prediction
-if st.button("Classify"):
+if st.button("Predict"):
     # Ensure order of variables
     input_df = pd.DataFrame([[values.get(var, np.nan) for var in vars_required]], columns=vars_required)
     input_df = input_df[scaler.feature_names_in_]
