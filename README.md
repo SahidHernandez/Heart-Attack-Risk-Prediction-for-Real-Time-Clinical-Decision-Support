@@ -1,4 +1,4 @@
-# Heart attack risk prediction approach using machine learning metamodels
+# Heart Attack Risk Prediction via Stacked Ensemble Metamodeling: A Machine Learning Framework for Real-Time Clinical Decision Support
 
 ## Experiments
 
