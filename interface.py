@@ -4,8 +4,7 @@ import numpy as np
 import joblib
 from PIL import Image
 import matplotlib.pyplot as plt
-#from sklearnex import patch_sklearn
-#patch_sklearn()
+
 
 # Page configuration
 logo = Image.open("ficLogo.png")
@@ -29,7 +28,7 @@ model_configs = {
 if 'model_name' not in st.session_state:
     st.session_state['model_name'] = 'Model 1'
 
-st.title("Heart Attack Classifier")
+st.title("Heart Attack Prediction")
 st.write("""
 This application is intended to support medical decisions and does not replace expert evaluation.
 It uses machine learning models to predict the risk of a heart attack based on different biomarkers:
