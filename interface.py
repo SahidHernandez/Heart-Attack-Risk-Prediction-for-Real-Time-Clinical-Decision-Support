@@ -76,10 +76,6 @@ with col1:
 with col2:
     if st.button("Model 2"):
         st.session_state['model_name'] = 'Model 2'
-
-model_name = st.session_state['model_name']
-st.markdown(f"*Selected model:* {model_name}")
-
 with col3:
     if st.button("Model 3"):
         st.session_state['model_name'] = 'Model 3'
