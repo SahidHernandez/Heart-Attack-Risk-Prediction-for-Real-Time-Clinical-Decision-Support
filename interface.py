@@ -25,7 +25,7 @@ model_configs = {
     'Model 3': {
         'model': joblib.load('Dataset_3/ensemble_RandomForest_dataset3.joblib'),
         'scaler': joblib.load('Dataset_3/model_standardscaler.pkl'),
-        'variable': ['time', 'ejection_fraction', 'serum-creatinine', 'age', 'serum_sodium']
+        'variable': ['time', 'ejection_fraction', 'serum_creatinine', 'age', 'serum_sodium']
     }
 }
 
