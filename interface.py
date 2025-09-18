@@ -23,7 +23,7 @@ model_configs = {
         'variable': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
     },
     'Model 3': {
-        'model': joblib.load('Dataset_3/ensemble_RandomForest_dataset3.pkl'),
+        'model': joblib.load('Dataset_3/ensemble_RandomForest_dataset3.joblib'),
         'scaler': joblib.load('Dataset_3/model_standardscaler.pkl'),
         'variable': ['time', 'ejection_fraction', 'serum-creatinine', 'age', 'serum_sodium']
     }
