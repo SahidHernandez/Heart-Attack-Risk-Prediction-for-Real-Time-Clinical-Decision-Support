@@ -131,7 +131,7 @@ if 'serum_sodium' in vars_required:
     values['serum_sodium'] = st.number_input("Serum sodium", min_value=0, value=130)
 
 if 'serum_creatinine' in vars_required:
-    values['serum_creatinine'] = st.number_input("Serum creatinine", min_value=0, value=1.1)
+    values['serum_creatinine'] = st.number_input("Serum creatinine", min_value=0.0, value=1.1)
 
 if 'ejection_fraction' in vars_required:
     values['ejection_fraction'] = st.number_input("Ejection fraction", min_value=0, value=20)
