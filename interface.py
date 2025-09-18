@@ -136,6 +136,9 @@ if 'serum_creatinine' in vars_required:
 if 'ejection_fraction' in vars_required:
     values['ejection_fraction'] = st.number_input("Ejection fraction", min_value=0, value=20)
 
+if 'age' in vars_required:
+    values['age'] = st.number_input("Age", min_value=0, max_value=120, value=45)
+
 # Prediction
 if st.button("Predict"):
     # Ensure order of variables
