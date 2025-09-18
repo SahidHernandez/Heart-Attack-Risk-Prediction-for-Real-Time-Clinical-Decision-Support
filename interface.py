@@ -58,24 +58,31 @@ with st.expander("Model 2", expanded=False):
 
 with st.expander("Model 3", expanded=False):
     st.markdown("""
-    - **Exang:** Exercise-induced angina (0 = No, 1 = Yes). 
-    - **Cp:** Chest pain type (0 = typical angina, 1 = atypical angina, 2 = non-anginal, 3 = asymptomatic).
-    - **Oldpeak:** ST depression induced by exercise relative to rest.
-    - **Thalach:** Maximum heart rate achieved.
-    - **Ca:** Number of major vessels (0–3) colored by fluoroscopy.
+    - **Time:** Follow-up period (days). 
+    - **Ejection fraction:** Percentage of blood leaving the heart at each contraction (percentage).
+    - **Serum creatinine:** Level of serum creatinine in the blood (mg/dL).
+    - **Age:** Patient's age.
+    - **Serum sodium:** Level of serum sodium in the blood (mEq/L).
     """)
 
 st.markdown("---")
 
 # Model selection buttons
 st.subheader("Select the model for prediction")
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 with col1:
     if st.button("Model 1"):
         st.session_state['model_name'] = 'Model 1'
 with col2:
     if st.button("Model 2"):
         st.session_state['model_name'] = 'Model 2'
+
+model_name = st.session_state['model_name']
+st.markdown(f"*Selected model:* {model_name}")
+
+with col3:
+    if st.button("Model 3"):
+        st.session_state['model_name'] = 'Model 3'
 
 model_name = st.session_state['model_name']
 st.markdown(f"*Selected model:* {model_name}")
@@ -120,6 +127,18 @@ if 'thalach' in vars_required:
 
 if 'ca' in vars_required:
     values['ca'] = st.selectbox("Number of vessels (ca)", options=[0, 1, 2, 3])
+
+if 'time' in vars_required:
+    values['time'] = st.number_input("Time", min_value=0, value=45)
+
+if 'serum_sodium' in vars_required:
+    values['serum_sodium'] = st.number_input("Serum sodium", min_value=0, value=130)
+
+if 'serum_creatinine' in vars_required:
+    values['serum_creatinine'] = st.number_input("Serum creatinine", min_value=0, value=1.1)
+
+if 'ejection_fraction' in vars_required:
+    values['ejection_fraction'] = st.number_input("Ejection fraction", min_value=0, value=20)
 
 # Prediction
 if st.button("Predict"):
