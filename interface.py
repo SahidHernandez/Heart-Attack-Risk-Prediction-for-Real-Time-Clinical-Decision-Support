@@ -21,6 +21,11 @@ model_configs = {
         'model': joblib.load('Dataset_2/ensemble_DecisionTree_dataset2.pkl'),
         'scaler': joblib.load('Dataset_2/model_standardscaler.pkl'),
         'variable': ['exang', 'cp', 'oldpeak', 'thalach', 'ca']
+    },
+    'Model 3': {
+        'model': joblib.load('Dataset_3/ensemble_RandomForest_dataset3.pkl'),
+        'scaler': joblib.load('Dataset_3/model_standardscaler.pkl'),
+        'variable': ['time', 'ejection_fraction', 'serum-creatinine', 'age', 'serum_sodium']
     }
 }
 
@@ -43,6 +48,15 @@ with st.expander("Model 1", expanded=False):
     """)
 
 with st.expander("Model 2", expanded=False):
+    st.markdown("""
+    - **Exang:** Exercise-induced angina (0 = No, 1 = Yes). 
+    - **Cp:** Chest pain type (0 = typical angina, 1 = atypical angina, 2 = non-anginal, 3 = asymptomatic).
+    - **Oldpeak:** ST depression induced by exercise relative to rest.
+    - **Thalach:** Maximum heart rate achieved.
+    - **Ca:** Number of major vessels (0–3) colored by fluoroscopy.
+    """)
+
+with st.expander("Model 3", expanded=False):
     st.markdown("""
     - **Exang:** Exercise-induced angina (0 = No, 1 = Yes). 
     - **Cp:** Chest pain type (0 = typical angina, 1 = atypical angina, 2 = non-anginal, 3 = asymptomatic).
